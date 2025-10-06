@@ -1,4 +1,4 @@
-# TaskManager
+# TaskByProperties
 A C# console app to practice OOP encapsulation through different types of properties. Each branch focuses on a specific property type, with game-themed classes like inventory items, achievements, and loggers.
 # 📖 About
 TaskManager is a learning project to master C# properties and encapsulation. It includes:
