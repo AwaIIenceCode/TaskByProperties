@@ -20,7 +20,7 @@ class InventoryItem
         set
         {
             if (value < 0 || value > 64)
-                throw new ArgumentException("Quantity cannot be negative!");
+                throw new ArgumentException("Quantity must be between 0 and 64!");
             _quantity = value;
         }
     }
