@@ -1,19 +1,22 @@
 ﻿using System;
+using System.Text; 
 
 class Logger
 {
-    private string _logs = String.Empty;
+    private StringBuilder _logs = new StringBuilder();
     public Logger() {}
     public string Message
-    { set => _logs += value + "\n"; }
+    {
+        set => _logs.AppendLine(value);
+    }
     public void PrintLogs()
     {
-        Console.WriteLine(_logs);
+        Console.WriteLine(_logs.ToString());
     }
     public void ClearLogs()
     {
-        _logs = string.Empty;
-        Console.WriteLine("\nLogs cleared");
+        _logs.Clear();
+        Console.WriteLine("Logs cleared!");
     }
 }
 class Program
