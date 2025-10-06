@@ -2,16 +2,18 @@
 
 class InventoryItem
 {
-    private string _name;
+    private readonly string _name;
     private byte _quantity;
 
     public InventoryItem(string name, byte quantity)
     {
         if (string.IsNullOrEmpty(name)) throw new ArgumentException("Name cannot be empty!");
         this._name = name;
-        this._quantity = quantity;
+        Quantity = quantity;
     }
-
+    
+    public string Name { get => _name; }
+    
     public byte Quantity
     {
         get => _quantity;
@@ -25,7 +27,7 @@ class InventoryItem
 
     public void Print()
     {
-        Console.WriteLine($"Item: {_name}, Quantity: {Quantity}");
+        Console.WriteLine($"Item: {Name}, Quantity: {Quantity}");
     }
 }
 
